@@ -13,6 +13,8 @@ class Country extends SelectableItem {
     required this.flagPath,
   });
 
+  bool get isUzbekistan => code == "UZ";
+
   factory Country.fromJson(Map<String, dynamic> json) {
     return Country(
       id: json['id'],
