@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Nukus shahari",
+    "name": "Nukus shahri",
     "region_id": 4334
   },
   {
@@ -86,12 +86,12 @@
   },
   {
     "id": 18,
-    "name": "Andijon shahari",
+    "name": "Andijon shahri",
     "region_id": 4322
   },
   {
     "id": 19,
-    "name": "Xonobod shahari",
+    "name": "Xonobod shahri",
     "region_id": 4322
   },
   {
@@ -166,12 +166,12 @@
   },
   {
     "id": 34,
-    "name": "Buxoro shahari",
+    "name": "Buxoro shahri",
     "region_id": 4323
   },
   {
     "id": 35,
-    "name": "Kogon shahari",
+    "name": "Kogon shahri",
     "region_id": 4323
   },
   {
@@ -291,12 +291,12 @@
   },
   {
     "id": 59,
-    "name": "Jizzax shahari",
+    "name": "Jizzax shahri",
     "region_id": 4325
   },
   {
     "id": 60,
-    "name": "Qarshi shahari",
+    "name": "Qarshi shahri",
     "region_id": 4328
   },
   {
@@ -376,12 +376,12 @@
   },
   {
     "id": 76,
-    "name": "Navoiy shaxri",
+    "name": "Navoiy shahri",
     "region_id": 4327
   },
   {
     "id": 77,
-    "name": "Zarafshon shaxri",
+    "name": "Zarafshon shahri",
     "region_id": 4327
   },
   {
@@ -406,7 +406,7 @@
   },
   {
     "id": 82,
-    "name": "Navbaxor tumani",
+    "name": "Navbahor tumani",
     "region_id": 4327
   },
   {
@@ -431,7 +431,7 @@
   },
   {
     "id": 87,
-    "name": "Namangan shahari",
+    "name": "Namangan shahri",
     "region_id": 4326
   },
   {
@@ -501,12 +501,12 @@
   },
   {
     "id": 101,
-    "name": "Samarqand shahari",
+    "name": "Samarqand shahri",
     "region_id": 4329
   },
   {
     "id": 102,
-    "name": "Kattaqo'rg'on shahari",
+    "name": "Kattaqo'rg'on shahri",
     "region_id": 4329
   },
   {
@@ -621,17 +621,17 @@
   },
   {
     "id": 125,
-    "name": "Guliston shahari",
+    "name": "Guliston shahri",
     "region_id": 4330
   },
   {
     "id": 126,
-    "name": "Yangiyer shahari",
+    "name": "Yangiyer shahri",
     "region_id": 4330
   },
   {
     "id": 127,
-    "name": "Shirin shahari",
+    "name": "Shirin shahri",
     "region_id": 4330
   },
   {
@@ -691,7 +691,7 @@
   },
   {
     "id": 139,
-    "name": "Termiz shahari",
+    "name": "Termiz shahri",
     "region_id": 4331
   },
   {
@@ -711,37 +711,37 @@
   },
   {
     "id": 143,
-    "name": "Angren shahari",
+    "name": "Angren shahri",
     "region_id": 4332
   },
   {
     "id": 144,
-    "name": "Bekobod shahari",
+    "name": "Bekobod shahri",
     "region_id": 4332
   },
   {
     "id": 145,
-    "name": "Nurafshon shahari",
+    "name": "Nurafshon shahri",
     "region_id": 4332
   },
   {
     "id": 146,
-    "name": "Olmaliq shahari",
+    "name": "Olmaliq shahri",
     "region_id": 4332
   },
   {
     "id": 147,
-    "name": "Ohangaron shahari",
+    "name": "Ohangaron shahri",
     "region_id": 4332
   },
   {
     "id": 148,
-    "name": "Chirchiq shahari",
+    "name": "Chirchiq shahri",
     "region_id": 4332
   },
   {
     "id": 149,
-    "name": "Yangiyo'l shahari",
+    "name": "Yangiyo'l shahri",
     "region_id": 4332
   },
   {
@@ -836,7 +836,7 @@
   },
   {
     "id": 168,
-    "name": "Quvasoy shahari",
+    "name": "Quvasoy shahri",
     "region_id": 4324
   },
   {
@@ -846,12 +846,12 @@
   },
   {
     "id": 170,
-    "name": "Qo'qon shahari",
+    "name": "Qo'qon shahri",
     "region_id": 4324
   },
   {
     "id": 171,
-    "name": "Marg'ilon shahari",
+    "name": "Marg'ilon shahri",
     "region_id": 4324
   },
   {
@@ -911,17 +911,17 @@
   },
   {
     "id": 183,
-    "name": "Farg'ona shahari",
+    "name": "Farg'ona shahri",
     "region_id": 4324
   },
   {
     "id": 184,
-    "name": "Urganch shahari",
+    "name": "Urganch shahri",
     "region_id": 4333
   },
   {
     "id": 185,
-    "name": "Xiva shahari",
+    "name": "Xiva shahri",
     "region_id": 4333
   },
   {
@@ -946,7 +946,7 @@
   },
   {
     "id": 190,
-    "name": "Hazorasp tumani",
+    "name": "Xazorasp tumani",
     "region_id": 4333
   },
   {
@@ -1001,7 +1001,7 @@
   },
   {
     "id": 201,
-    "name": "Sergeli tumani",
+    "name": "Sirg'ali tumani",
     "region_id": 4321
   },
   {
@@ -1011,7 +1011,7 @@
   },
   {
     "id": 203,
-    "name": "Shayxontoxur tumani",
+    "name": "Shayxontohur tumani",
     "region_id": 4321
   },
   {
