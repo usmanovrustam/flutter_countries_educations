@@ -35,6 +35,7 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              FlagImage.getImage(),
               const Text("Address"),
               AddressSelector.country(
                 title: 'Select Country',

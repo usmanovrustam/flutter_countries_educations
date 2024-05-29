@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_countries_educations/flutter_countries_educations.dart';
 import 'package:flutter_countries_educations/presentation/bottom_sheet.dart';
 import 'package:flutter_countries_educations/src/assets/assets.gen.dart';
-import 'package:flutter_countries_educations/src/constants.dart';
 
 class AddressSelector {
   static Future<List<T>> _loadData<T>(
