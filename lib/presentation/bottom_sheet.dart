@@ -5,18 +5,18 @@ class BottomSheetBuilder<T extends SelectableItem> extends StatelessWidget {
   final Widget Function(BuildContext) builder;
   final Widget Function(BuildContext, T) foregroundItemBuilder;
   final Future<List<T>> Function() load;
-  final T? selectedValue;
   final String title;
+  final T? initialValue;
   final void Function(T?)? onItemSelect;
 
   const BottomSheetBuilder({
     super.key,
     required this.builder,
     required this.load,
-    this.selectedValue,
     this.onItemSelect,
     required this.foregroundItemBuilder,
     required this.title,
+    this.initialValue,
   });
 
   List<T> _filterData(List<T> data, String query) {
@@ -37,10 +37,7 @@ class BottomSheetBuilder<T extends SelectableItem> extends StatelessWidget {
           return Column(
             children: [
               const SizedBox(height: 16.0),
-              Text(
-                title,
-                style: const TextStyle(fontSize: 12),
-              ),
+              Text(title, style: const TextStyle(fontSize: 12)),
               const SizedBox(height: 8.0),
               const Divider(),
               Expanded(
@@ -102,7 +99,11 @@ class BottomSheetBuilder<T extends SelectableItem> extends StatelessWidget {
         });
       },
     ).then((result) {
-      onItemSelect?.call(result);
+      if (initialValue != null) {
+        onItemSelect?.call(result ?? initialValue);
+      } else {
+        onItemSelect?.call(result);
+      }
     });
   }
 

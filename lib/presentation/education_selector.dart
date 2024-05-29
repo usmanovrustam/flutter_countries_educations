@@ -23,7 +23,7 @@ class EducationSelector<T> {
   }
 
   static Future<List<EducationType>> _loadEducationType() async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 300));
     final educationType = await _loadData(
       AssetsManager.json.educationsTypes,
       EducationType.fromJson,
@@ -33,7 +33,7 @@ class EducationSelector<T> {
   }
 
   static Future<List<School>> _loadSchools(int? districtId) async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 300));
     final schools = await _loadData(
       AssetsManager.json.schools,
       School.fromJson,
@@ -51,7 +51,7 @@ class EducationSelector<T> {
   }
 
   static Future<List<College>> _loadColleges(int? districtId) async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 300));
     final colleges = await _loadData(
       AssetsManager.json.colleges,
       College.fromJson,
@@ -69,7 +69,7 @@ class EducationSelector<T> {
   }
 
   static Future<List<University>> _loadUniversities(int? regionId) async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 300));
     final universities = await _loadData(
       AssetsManager.json.universities,
       University.fromJson,

@@ -5,7 +5,7 @@ class Country extends SelectableItem {
   final String dialCode;
   final String flagPath;
 
-  Country({
+  const Country({
     required super.id,
     required super.name,
     required this.code,

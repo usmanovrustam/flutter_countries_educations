@@ -23,6 +23,7 @@ class _MyAppState extends State<MyApp> {
   Region? _educationRegion;
   District? _educationDistrict;
   School? _school;
+  College? _college;
   University? _university;
 
   @override
@@ -109,6 +110,7 @@ class _MyAppState extends State<MyApp> {
                 AddressSelector.region(
                   title: 'Select Region',
                   countryId: _country?.id,
+                  selectedRegion: _educationRegion,
                   onItemSelect: (region) {
                     setState(() {
                       _educationRegion = region;
@@ -122,11 +124,12 @@ class _MyAppState extends State<MyApp> {
               if (!(_educationType?.isUniversity ?? false) &&
                   _educationRegion != null)
                 AddressSelector.district(
-                  regionId: _region?.id,
+                  regionId: _educationRegion?.id,
                   title: 'Select District',
+                  selectedDistrict: _educationDistrict,
                   onItemSelect: (district) {
                     setState(() {
-                      _district = district;
+                      _educationDistrict = district;
                     });
                   },
                   builder: (context) => const ElevatedButton(
@@ -134,6 +137,52 @@ class _MyAppState extends State<MyApp> {
                     child: Text('Select District'),
                   ),
                 ),
+              if ((_educationType?.isSchool ?? false) &&
+                  _educationDistrict != null)
+                EducationSelector.school(
+                  title: "School",
+                  districtId: _educationDistrict?.id,
+                  selectedSchool: _school,
+                  onItemSelect: (school) {
+                    setState(() {
+                      _school = school;
+                    });
+                  },
+                  builder: (context) => const ElevatedButton(
+                    onPressed: null,
+                    child: Text('Select District'),
+                  ),
+                ),
+              if ((_educationType?.isCollege ?? false) &&
+                  _educationDistrict != null)
+                EducationSelector.college(
+                  title: "College",
+                  districtId: _educationDistrict?.id,
+                  onItemSelect: (college) {
+                    setState(() {
+                      _college = college;
+                    });
+                  },
+                  builder: (context) => const ElevatedButton(
+                    onPressed: null,
+                    child: Text('Select College'),
+                  ),
+                ),
+              if ((_educationType?.isUniversity ?? false) &&
+                  _educationRegion != null)
+                EducationSelector.university(
+                  title: "University",
+                  regionId: _educationRegion?.id,
+                  onItemSelect: (university) {
+                    setState(() {
+                      _university = university;
+                    });
+                  },
+                  builder: (context) => const ElevatedButton(
+                    onPressed: null,
+                    child: Text('Select University'),
+                  ),
+                )
             ],
           ),
         ),

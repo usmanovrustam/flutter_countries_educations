@@ -3,12 +3,10 @@ import 'dart:isolate';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_countries_educations/data/model/address/country.dart';
-import 'package:flutter_countries_educations/data/model/address/district.dart';
-import 'package:flutter_countries_educations/data/model/address/neighborhood.dart';
-import 'package:flutter_countries_educations/data/model/address/region.dart';
+import 'package:flutter_countries_educations/flutter_countries_educations.dart';
 import 'package:flutter_countries_educations/presentation/bottom_sheet.dart';
 import 'package:flutter_countries_educations/src/assets/assets.gen.dart';
+import 'package:flutter_countries_educations/src/constants.dart';
 
 class AddressSelector {
   static Future<List<T>> _loadData<T>(
@@ -25,7 +23,7 @@ class AddressSelector {
   }
 
   static Future<List<Country>> _loadCountries() async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 300));
     final countries = await _loadData(
       AssetsManager.json.countries,
       Country.fromJson,
@@ -35,6 +33,7 @@ class AddressSelector {
   }
 
   static Future<List<Region>> _loadRegions(int? countryId) async {
+    await Future.delayed(const Duration(milliseconds: 300));
     final List<Region> regions = await _loadData(
       AssetsManager.json.regions,
       Region.fromJson,
@@ -52,7 +51,7 @@ class AddressSelector {
   }
 
   static Future<List<District>> _loadDistricts(int? regionId) async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 300));
     final districts = await _loadData(
       AssetsManager.json.districts,
       District.fromJson,
@@ -70,7 +69,7 @@ class AddressSelector {
   }
 
   static Future<List<Neighborhood>> _loadNeighborhoods(int? districtId) async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 300));
     final neighborhoods = await _loadData(
       AssetsManager.json.neighborhoods,
       Neighborhood.fromJson,
@@ -87,6 +86,39 @@ class AddressSelector {
     return filteredNeighborhoods;
   }
 
+  static Widget dialCode({
+    required String title,
+    required void Function(Country?) onItemSelect,
+    required Widget Function(BuildContext) builder,
+    Country? selectedCountry,
+  }) {
+    selectedCountry ??= Constants.uzbekistan;
+
+    return BottomSheetBuilder<Country>(
+      title: title,
+      onItemSelect: onItemSelect,
+      builder: builder,
+      load: _loadCountries,
+      initialValue: selectedCountry,
+      foregroundItemBuilder: (context, item) {
+        return ListTile(
+          leading: ClipOval(
+            child: SizedBox(
+              width: 40,
+              height: 40,
+              child: SvgGenImage(item.flagPath).svg(fit: BoxFit.fill),
+            ),
+          ),
+          title: Text(item.name),
+          subtitle: Text(item.dialCode),
+          trailing: selectedCountry != null && selectedCountry.id == item.id
+              ? const Icon(Icons.radio_button_checked, color: Colors.blue)
+              : null,
+        );
+      },
+    );
+  }
+
   static Widget country({
     required String title,
     required void Function(Country?) onItemSelect,
@@ -100,15 +132,7 @@ class AddressSelector {
       load: _loadCountries,
       foregroundItemBuilder: (context, item) {
         return ListTile(
-          leading: ClipOval(
-            child: SizedBox(
-              width: 40,
-              height: 40,
-              child: SvgGenImage(item.flagPath).svg(fit: BoxFit.fill),
-            ),
-          ),
           title: Text(item.name),
-          subtitle: Text(item.dialCode),
           trailing: selectedCountry != null && selectedCountry.id == item.id
               ? const Icon(Icons.radio_button_checked, color: Colors.blue)
               : null,

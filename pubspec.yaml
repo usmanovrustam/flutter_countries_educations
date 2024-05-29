@@ -1,6 +1,6 @@
 name: flutter_countries_educations
 description: "A new Flutter plugin project."
-version: 0.0.1
+version: 0.0.2
 homepage:
 
 environment:
@@ -10,16 +10,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  plugin_platform_interface: ^2.0.2
-  flutter_gen: ^5.5.0+1
-  flutter_svg: ^2.0.10+1
+  flutter_svg: 2.0.9
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-  build_runner:
-  flutter_gen_runner:
+  build_runner: 2.4.6
+  flutter_gen_runner: 5.3.2
 
 flutter:
   uses-material-design: true
