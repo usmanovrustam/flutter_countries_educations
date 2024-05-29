@@ -1,0 +1,67 @@
+name: flutter_countries_educations
+description: "A new Flutter plugin project."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  flutter_gen: ^5.5.0+1
+  flutter_svg: ^2.0.10+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner:
+  flutter_gen_runner:
+
+flutter:
+  uses-material-design: true
+  generate: false  
+  assets:
+    - assets/images/flags/
+    - assets/json/
+
+flutter_gen:
+  output: lib/src/assets/
+  line_length: 100
+  assets:
+    enabled: true
+    outputs:
+      package_parameter_enabled: true
+      class_name: AssetsManager
+
+  integrations:
+    flutter_svg: true
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
